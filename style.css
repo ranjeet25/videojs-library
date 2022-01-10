@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/** Main container  **/
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  background: linear-gradient(to right, #e5ceff, #b9dfff);
+}
+video {
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.404) 0px 4px 12px;
+}
+
+#my-video1 {
+  width: 500px;
+  height: 300px;
+  transition: 0.2s ease-in-out;
+}
+#my-video1:hover {
+  transform: translateY(-5px);
+  transform: scale(1.03);
+}
+
+#my-video2 {
+  width: 500px;
+  height: 300px;
+  color: #e3f2ff;
+
+  transition: 0.2s ease-in-out;
+}
+#my-video2:hover {
+  transform: translateY(-5px);
+  transform: scale(1.03);
+}
+
+/** This class is from video.js I have overridden some properties  **/
+
+.video-js .vjs-big-play-button {
+  border: 0em solid #fff !important;
+  background-color: #1a1a1a8e !important;
+  border-radius: 0.1em !important;
+}
+
+/** Media query  **/
+
+@media (max-width: 700px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  #my-video1 {
+    width: 300px;
+    height: 180px;
+  }
+
+  #my-video2 {
+    width: 300px;
+    height: 180px;
+  }
+}

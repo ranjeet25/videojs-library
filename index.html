@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!--CDN LINK OF VIDEO.JS-->
+
+    <link href="https://vjs.zencdn.net/7.17.0/video-js.css" rel="stylesheet" />
+
+    <title>QuantunHunt-Task6</title>
+  </head>
+  <body>
+    <div class="container">
+      <video
+        id="my-video1"
+        class="video-js vjs-big-play-centered"
+        class="vjs-big-play-button"
+        onclick="myFun()"
+        controls
+        muted
+        preload="auto"
+        data-setup="{}"
+      >
+        <source src="seawave-v.mp4" type="video/mp4" />
+      </video>
+
+      <video
+        id="my-video2"
+        class="video-js vjs-big-play-centered"
+        class="vjs-big-play-button"
+        controls
+        muted
+        preload="auto"
+        data-setup="{}"
+      >
+        <source src="square-road-v.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <!--JAVASCRIPT for playing both video together-->
+    <script>
+      function myFun() {
+        var myPlayer = videojs("my-video2");
+
+        myPlayer.ready(function () {
+          myPlayer.play();
+        });
+      }
+    </script>
+    <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
+  </body>
+</html>
